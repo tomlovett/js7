@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app="NSA">
+<head>
+	<title>Extremist Bait</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js"> </script>
+	<script type="text/javascript" src="main.js"> </script>
+</head>
+<body ng-controller='metricCollector' 
+	ng-click='recordClick($event)' ng-dblclick='recordDblClick($event)'
+	ng-keydown='recordKeyDown($event)' ng-keyup='recordKeyUp'
+	ng-mousedown='recordMouseDown($event)' ng-mouseup='recordMouseUp($event)'
+	ng-bind='dataLog' >
+
+</body>
+</html>
