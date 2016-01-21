@@ -7,10 +7,16 @@
 	<script type="text/javascript" src="main.js"> </script>
 </head>
 <body ng-controller='metricCollector' 
-	ng-click='recordClick($event)' ng-dblclick='recordDblClick($event)'
-	ng-keydown='recordKeyDown($event)' ng-keyup='recordKeyUp'
-	ng-mousedown='recordMouseDown($event)' ng-mouseup='recordMouseUp($event)'
-	ng-bind='dataLog' >
+	ng-click='recordEvent($event)' ng-dblclick='recordEvent($event)'
+	ng-keydown='recordEvent($event)' ng-keyup='recordEvent($event)'
+	ng-mousedown='recordEvent($event)' ng-mouseup='recordEvent($event)'
+	ng-mouseenter='recordEvent($event)' ng-mouseleave='recordEvent($event)'
+	ng-mousemove='recordEvent($event)'
+	>
+
+	<!-- <h1>WE KNOW WHAT YOU'RE DOING</h1> -->
+
+	<p ng-repeat="event in eventLog"><span>WE KNOW WHAT YOU'RE DOING</span><br>{{processEvent(event)}}</p>
 
 </body>
 </html>

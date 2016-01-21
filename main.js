@@ -3,30 +3,18 @@ angular.module('NSA', []);
 angular.module('NSA')
 	.controller('metricCollector', ['$scope', function($scope) {
 
-	$scope.dataLog = [];
+	$scope.eventLog = [];
 
-	$scope.recordClick = function(event) {
-		scope.dataLog.push(event);
+	$scope.recordEvent = function(event) {
+		$scope.eventLog.push(event);
+		console.log(event);
 	}
 
-	$scope.recordDblClick= function(event) {
-		scope.dataLog.push(event);
+	$scope.processEvent = function(event) {
+		var result = 'type: ' + event.type
+		result += ' clientX: ' + event.clientX + ' clientY: ' + event.clientY
+		result += ' timestamp: ' + event.timeStamp
+		result += ' movementX: ' + event.movementX + ' movementY: ' + event.movementY
+		return result;
 	}
-
-	$scope.recordKeyDown = function(event) {
-		scope.dataLog.push(event);
-	}
-
-	$scope.recordKeyUp = function(event) {
-		scope.dataLog.push(event);
-	}
-
-	$scope.recordMouseDown = function(event) {
-		scope.dataLog.push(event);
-	}
-
-	$scope.recordMouseUp = function(event) {
-		scope.dataLog.push(event);
-	}
-
 }])
