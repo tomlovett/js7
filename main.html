@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="NSA">
 <head>
-	<title>NSA.gov</title>
+	<title>NSA.io</title>
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js"> </script>
 	<script type="text/javascript" src="main.js"> </script>
@@ -15,6 +15,18 @@
 	>
 
 	<!-- <h1>WE KNOW WHAT YOU'RE DOING</h1> -->
+
+	<div ng-bind="eventLog" ng-model="data"></div>
+
+	<div class='data'>
+	Events: {{ data['events'] }} <br>
+	Time: {{ data['time elapsed'] }} <br>
+	X Movement: {{ data['X movement'] }} <br>
+	Y Movement: {{ data['Y movement'] }} <br>
+	Clicks: {{ data['clicks'] }} <br>
+	Key-downs: {{ data['keydowns'] }} <br>
+	Key-ups: {{ data['keyups'] }} <br>
+	</div>
 
 	<p ng-repeat="event in eventLog"><span>WE KNOW WHAT YOU'RE DOING</span><br>{{processEvent(event)}}</p>
 

@@ -5,3 +5,12 @@ body {
 span {
 	font-size: 4em;
 }
+
+.data {
+	position: fixed;
+	top: 50%;
+	right: 30px;
+	height: ;
+	background-color: green;
+	padding: 5px;
+}
